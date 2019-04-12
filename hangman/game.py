@@ -58,7 +58,8 @@ class HangmanGame(object):
     
     WORD_LIST= ['rmotr', 'python', 'awesome']
     
-    def select_random_word(list):
+    @classmethod
+    def select_random_word(cls,list):
         if len(list)==0:
             raise InvalidListOfWordsException()
         word = random.choice(list)
